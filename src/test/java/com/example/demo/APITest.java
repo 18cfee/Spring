@@ -14,7 +14,7 @@ public class APITest
 	@Before
 	public void setup()
 	{
-		RestAssured.baseURI = "http://localhost:8080/hello";
+		RestAssured.baseURI = "http://localhost:8080";
 	}
 
 	@Test
@@ -22,7 +22,7 @@ public class APITest
 	{
 		RequestSpecification httpRequest = RestAssured.given();
 
-		Response response = httpRequest.get("");
+		Response response = httpRequest.get("/hello");
 
 		System.out.println("Response Body is =>  " + response.asString());
 
