@@ -146,3 +146,15 @@ Sep 25, 2018 3:55:01 PM com.example.demo.SpringDemoApplication sayHello
 INFO: whats is going on
 Sep 25, 2018 3:55:01 PM com.example.demo.SpringDemoApplication sayHello
 SEVERE: severe message
+Sep 25, 2018 4:02:10 PM com.example.demo.SpringDemoApplication sayHello
+WARNING: notha message
+Sep 25, 2018 4:02:10 PM com.example.demo.SpringDemoApplication sayHello
+INFO: whats is going on
+Sep 25, 2018 4:02:10 PM com.example.demo.SpringDemoApplication sayHello
+SEVERE: severe message
+Sep 25, 2018 4:03:11 PM com.example.demo.SpringDemoApplication sayHello
+WARNING: notha message
+Sep 25, 2018 4:03:11 PM com.example.demo.SpringDemoApplication sayHello
+INFO: whats is going on
+Sep 25, 2018 4:03:11 PM com.example.demo.SpringDemoApplication sayHello
+SEVERE: severe message
