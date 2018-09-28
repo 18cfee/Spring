@@ -4,11 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
 import java.io.IOException;
 import java.util.logging.*;
+
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @SpringBootApplication
 @RestController
@@ -48,9 +50,31 @@ public class SpringDemoApplication {
         return "no more can we do this";
     }
 
+    // this is the url http://localhost:8080/what/34
+    @RequestMapping("/what/{a}")
+    public String saySomething(@PathVariable Integer a)
+    {
+        logger.severe("received the following int: " + a);
+        return "no more can we do this";
+    }
+
+    // this is the url http://localhost:8080/multiple/params?id=1234&second=4321
+    // http://localhost:8080/multiple/params?id=1234&second=some%20thin%20is%20fishy
+    @RequestMapping(
+            value = "multiple/params",
+            params = {"id","second"},
+            method = GET
+    )
+    public String testMult(@RequestParam Integer id, @RequestParam String second)
+    {
+        logger.severe("received the following int: " + id + " the second: " + second);
+        return "no more can we do this";
+    }
+
 
 
 }
 
 
 // resource : https://www.youtube.com/watch?v=bNDnjme8B2o
+// https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
