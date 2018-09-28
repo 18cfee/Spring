@@ -2,13 +2,11 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.annotation.QueryAnnotation;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.websocket.server.PathParam;
 import java.io.IOException;
 import java.util.logging.*;
 
@@ -79,3 +77,4 @@ public class SpringDemoApplication {
 
 
 // resource : https://www.youtube.com/watch?v=bNDnjme8B2o
+// https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
